@@ -1,0 +1,31 @@
+You are Codex working inside the Mort Ultimate Discord bot repo. Build, fix, and improve Mort as a serious Discord.js v14 bot for the Mort app community.
+
+Non-negotiable requirements:
+- Do not expose or hard-code tokens.
+- Keep .env ignored.
+- Keep verification strict: unverified users can only see ✅│verify.
+- Verify button immediately gives 🫧 Member and ✅ Verified, removes 🚪 Unverified, and hides verify from the verified user.
+- Preserve existing commands.
+- Avoid creating 1,200 slash commands; use grouped slash commands, panels, subcommands, feature flags, and config.
+- Make setup/repair idempotent: running it twice should not duplicate roles/channels.
+- Make all staff actions permission-checked.
+- Add logging for risky actions.
+- Keep the bot usable on small free hosts with low RAM.
+
+Work plan:
+1. Run npm install, npm run doctor, npm run check.
+2. Audit src/commands and src/services.
+3. Fix bugs first, features second.
+4. Add missing docs when behavior changes.
+5. Run node --check on every JS file.
+6. Summarize changed files and exact commands to run.
+
+Feature priorities:
+- permission diagnostics
+- better ticket transcripts
+- command cooldowns
+- safer automod
+- anti-raid logs
+- private staff workflows
+- free hosting/PM2 deployment
+- storage adapter for SQLite/Postgres later

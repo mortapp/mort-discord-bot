@@ -1,0 +1,36 @@
+{
+  "name": "mort-discord-bot",
+  "version": "3.2.0",
+  "description": "Mort Ultimate: Discord server setup, strict verification gate, private channels, tickets, moderation, anti-raid, XP, backups, cloud/free-hosting docs, and AI improvement prompts.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "register": "node src/register-commands.js",
+    "check": "node --check src/index.js && node --check src/register-commands.js",
+    "audit": "npm audit --audit-level=moderate",
+    "doctor": "node src/scripts/doctor.js",
+    "start:prod": "NODE_ENV=production node src/index.js",
+    "audit:fix-safe": "npm audit fix",
+    "audit:check": "npm audit --audit-level=moderate",
+    "clean-install": "npm config set registry https://registry.npmjs.org/ && npm install"
+  },
+  "keywords": [
+    "discord",
+    "discord-bot",
+    "discordjs",
+    "mort",
+    "server-setup"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "dependencies": {
+    "discord.js": "^14.26.4",
+    "dotenv": "^17.4.2"
+  },
+  "overrides": {
+    "undici": "^6.27.0"
+  }
+}
