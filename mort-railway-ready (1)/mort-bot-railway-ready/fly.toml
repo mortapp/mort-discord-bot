@@ -1,0 +1,14 @@
+app = 'mort-discord-bot'
+primary_region = 'ord'
+
+[build]
+  dockerfile = 'Dockerfile'
+
+[env]
+  NODE_ENV = 'production'
+  PORT = '3000'
+  DATA_FILE = './data/mort-memory.json'
+
+[[vm]]
+  size = 'shared-cpu-1x'
+  memory = '256mb'
