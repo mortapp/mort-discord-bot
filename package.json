@@ -1,0 +1,12 @@
+{
+  "name": "mort-discord-bot-railway-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "cd mort-bot-railway-ready && npm install",
+    "start": "cd mort-bot-railway-ready && npm run register && npm start"
+  },
+  "engines": {
+    "node": "20.x"
+  }
+}
