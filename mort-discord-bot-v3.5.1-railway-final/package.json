@@ -1,0 +1,37 @@
+{
+  "name": "mort-discord-bot",
+  "version": "3.5.1",
+  "description": "Mort Ultimate v3.5.1: Railway-hardened Discord.js bot with persistent-storage guidance, setup repair, verification, moderation, tickets, XP/economy, anti-raid, anti-nuke, and @mention assistant.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "register": "node src/register-commands.js",
+    "check": "node --check src/index.js && node --check src/register-commands.js && find src -name \"*.js\" -print0 | xargs -0 -n1 node --check",
+    "test": "node --test tests/*.test.js",
+    "audit": "npm audit --audit-level=moderate",
+    "doctor": "node src/scripts/doctor.js",
+    "start:prod": "NODE_ENV=production node src/index.js",
+    "audit:fix-safe": "npm audit fix",
+    "audit:check": "npm audit --audit-level=moderate",
+    "clean-install": "npm config set registry https://registry.npmjs.org/ && npm install"
+  },
+  "keywords": [
+    "discord",
+    "discord-bot",
+    "discordjs",
+    "mort",
+    "server-setup"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": "20.x"
+  },
+  "dependencies": {
+    "discord.js": "^14.26.4",
+    "dotenv": "^17.4.2"
+  },
+  "overrides": {
+    "undici": "^6.27.0"
+  }
+}
