@@ -1,0 +1,20 @@
+You are a senior systems architect reviewing Mort Ultimate, a Discord.js v14 bot for a Discord server supporting the Mort app. Produce a production architecture review and prioritized implementation plan.
+
+Focus on:
+- Discord permissions and role hierarchy
+- verification gate correctness
+- slash command design
+- anti-raid safety
+- data persistence strategy
+- cloud/free hosting tradeoffs
+- operational runbooks
+- security and token handling
+- UX clarity for a teen-run community server
+
+Output:
+1. Critical risks
+2. Recommended architecture
+3. 30-day build plan
+4. Exact modules/files to create
+5. Anti-patterns to avoid
+6. Prompt for a coding AI to implement phase 1

@@ -1,0 +1,38 @@
+{
+  "name": "mort-discord-bot",
+  "version": "4.0.0",
+  "description": "Mort Ultimate v4.0.0: secure, persistent Discord.js community bot with moderation, tickets, verification, automation, and production hardening.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "register": "node src/register-commands.js",
+    "check": "node --check src/index.js && node --check src/register-commands.js && find src tests -name \"*.js\" -print0 | xargs -0 -n1 node --check",
+    "test": "node --test tests/*.test.js",
+    "test:coverage": "node --experimental-test-coverage --test tests/*.test.js",
+    "audit": "npm audit --audit-level=moderate",
+    "verify": "npm run check && npm test && npm run audit",
+    "doctor": "node src/scripts/doctor.js",
+    "start:prod": "NODE_ENV=production node src/index.js",
+    "clean-install": "npm ci"
+  },
+  "keywords": [
+    "discord",
+    "discord-bot",
+    "discordjs",
+    "mort",
+    "server-setup",
+    "moderation"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20 <23"
+  },
+  "dependencies": {
+    "discord.js": "^14.27.0",
+    "dotenv": "^17.4.2"
+  },
+  "overrides": {
+    "undici": "6.28.1"
+  }
+}

@@ -1,0 +1,29 @@
+[Unit]
+Description=Mort Ultimate Discord Gateway Bot
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=mort
+Group=mort
+WorkingDirectory=/opt/mort/app
+EnvironmentFile=/opt/mort/app/.env
+ExecStart=/usr/bin/env node /opt/mort/app/src/index.js
+Restart=on-failure
+RestartSec=5s
+TimeoutStopSec=30s
+KillSignal=SIGTERM
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+ReadWritePaths=/opt/mort/data
+
+[Install]
+WantedBy=multi-user.target
